@@ -1,10 +1,247 @@
+* {
+    box-sizing: border-box;
+  }
+
 .App {
     width: 100vw;
     height: 100vh;
-    text-align: center;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
 }
 
 body{
     padding: 0;
     margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+ul {
+    list-style-type: none;
+}
+
+.categories-pane{
+    height: 100%;
+    background-color: #3F51B5;
+}
+
+.categories-pane h1{
+    font-size: 35px;
+    margin: 10px;
+    height: 45px;
+    text-align: center;
+    color: white;
+    background-color: #1B2663;
+}
+
+.category-list{
+    padding: 0;
+    height: auto;
+    width: 100%;
+}
+
+.category-list .row{
+    padding: 0;
+    height: 50px;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.category-list .row:hover{
+    background-color: #32408E;
+    cursor: pointer;    
+}
+
+.row #title{
+    margin-left: 20px;
+}
+
+.product{
+    display:grid;
+    padding: 20px;
+}
+
+.products-pane button{
+    height:50px;
+    width:87%;
+    margin-right: 20px;
+    float:right;
+    padding: 5px 10px;
+    background-color:#1B2663;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: blanchedalmond;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 17px;
+}
+
+.products-pane button:hover{
+    cursor: pointer;
+    background-color:#010e53;
+}
+
+.product #title{
+    text-align: center;
+    font-size: 30px;
+    padding: 20px;
+    font-weight: bold;
+}
+
+.product .product-container{
+    display:grid;
+    grid-template-columns: 75% 25%;
+}
+
+.product-detail-container{
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    font-weight: 700;
+    /* border: 2px solid blue; */
+    height: fit-content;
+}
+
+.product-detail-container dev{
+    padding: 10px 0px;
+    /* background-color: darkblue; */
+    margin-top: 10px;
+}
+
+.product-detail-container .tag{
+    font-size: 18px;
+}
+
+.product-detail-container .value{
+    margin-left: 10px;
+}
+
+.product .image-container{
+    /* width: 50%;
+    border: 5px solid blue;
+    background-color: tomato; */
+    text-align: center;
+}
+
+.product .image-container img{
+    width: 80%;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.product .image-container img:hover{
+    cursor: pointer;
+}
+
+
+.products-list-pane{
+    /* float: right; */
+    height: 500px;
+    width: 250px;
+    margin-top: 50px;
+    margin-left: 20px;
+    background-color:rgb(226, 199, 164);
+    border: 5px solid black;
+    border-radius: 15px;
+}
+
+.products-list-pane #title{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+.products-list-pane .product-list{
+    margin: 15px;
+    padding-left: 20px;
+    list-style-type:decimal;
+    
+}
+
+.products-list-pane .product-list .row{
+    height: 40px;
+    width: 100%;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #3F51B5;
+    text-align: left;
+    font-size: 20px; 
+    
+}
+
+.slider{
+    /* background-color: brown; */
+    margin:20px 20px 20px 20px;
+    padding: 30px;
+    position: relative;
+    height: 500px;
+    width: 50%;
+    border: 2px solid black;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider .image{
+    height:400px;
+    margin:20px;
+    border-radius: 10px;
+}
+
+.slider .right-arrow{
+    position: absolute;
+    top: 50%;
+    right: 32px;
+    font-size: 3rem;
+    color: black;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.slider .left-arrow{
+    position: absolute;
+    top: 50%;
+    left: 32px;
+    font-size: 3rem;
+    color: black;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.slide{
+    opacity: 0;
+    transition-duration: 1s ease;
+}
+
+.slide.active{
+    opacity: 1;
+    transition-duration: 1s;
+    transform:scale(1.08)
+}
+
+.product-page{
+    display:flex;
+    flex-direction: row;
+    
+}
+
+.product-page .product-details .items{
+    margin-top:50px;
+    height: 200px;
+    font-size: 25px;
+    padding: 50px;
+    padding-top: 0;
+}
+
+.product-page .product-details .items li{
+    height: 50px;
+}
+
+.product-page .product-details{
+    margin: 50px;
+    margin-left: 150px;
+}
+
