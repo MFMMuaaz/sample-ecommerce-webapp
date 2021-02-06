@@ -2,6 +2,8 @@ CREATE TABLE IF NOT EXISTS Product(
 	id INT AUTO_INCREMENT,
     product_name VARCHAR(150) NOT NULL,
     price INT NOT NULL,
+    rating INT NOT NULL,
+    size varchar(10) NOT NULL,
     PRIMARY KEY (id)
 );
 
